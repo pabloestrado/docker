@@ -12,6 +12,7 @@ RUN  apt-get -f -y remove python-pip && apt-get -f -y autoremove
 
 ADD tpl /usr/local/bin/tpl
 ADD entrypoint.sh /entrypoint.sh
+ADD service.conf.tpl /etc/supervisor/conf.d/service.conf.tpl
 
 RUN chmod 755 /usr/local/bin/tpl && chmod 755 /entrypoint.sh
 
